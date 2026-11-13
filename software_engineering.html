@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Engineering — LNCTU Notes</title>
+  <meta name="description" content="Software Engineering (MAI-104) — Software, Software Engineering, SDLC, and Unit 1: Paradigms, Waterfall, Spiral, Prototype, Requirements, Elicitation, SRS, Change Management, Project Management." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="software_engineering.css" />
+</head>
+<body>
+
+  <!-- ============================= HEADER ============================= -->
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-label="Back to LNCTU Notes home">
+      <span class="brand-icon" aria-hidden="true">📖</span>
+      <span class="brand-name">LNCTU Notes</span>
+    </a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <span class="theme-icon" aria-hidden="true">🌙</span>
+    </button>
+  </header>
+
+  <!-- ============================= NAVBAR ============================= -->
+  <nav class="section-nav" id="sectionNav">
+    <div class="nav-inner">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+        <span class="hamburger" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="nav-toggle-text">Sections</span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#section-software" class="nav-link">Software &amp; SE</a></li>
+        <li><a href="#section-sdlc" class="nav-link">SDLC</a></li>
+        <li><a href="#unit-1" class="nav-link">Unit 1</a></li>
+        <li><a href="#unit-2" class="nav-link">Unit 2</a></li>
+        <li><a href="#unit-3" class="nav-link">Unit 3</a></li>
+        <li><a href="#unit-4" class="nav-link">Unit 4</a></li>
+        <li><a href="#unit-5" class="nav-link">Unit 5</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================= MAIN ============================= -->
+  <main class="page">
+
+    <!-- Page title -->
+    <header class="subject-header">
+      <span class="subject-code">MAI-104</span>
+      <h1>Software Engineering</h1>
+      <p class="subject-meta">Methodologies &amp; UML · 5 Units · Semester 1</p>
+    </header>
+
+    <!-- ============ SECTION 1 — Software & Software Engineering ============ -->
+    <section id="section-software" class="content-section">
+      <h2 class="section-title">Software &amp; Software Engineering</h2>
+
+      <p>
+        Software Engineering (MAI-104) introduces the systematic process of building
+        software — from requirements through design, coding, testing, deployment, and
+        maintenance. This section lays the foundation: what software is, what software
+        engineering means, and why disciplined engineering matters.
+      </p>
+
+      <h3>Syllabus</h3>
+      <ul class="syllabus-list">
+        <li><strong>Unit I</strong> — Software Engineering paradigms (Waterfall, Spiral, Prototype), Software Requirements, Elicitation Techniques, Initial Requirements Document, SRS Document, Requirements Change Management, Project Management</li>
+        <li><strong>Unit II</strong> — To be added</li>
+        <li><strong>Unit III</strong> — To be added</li>
+        <li><strong>Unit IV</strong> — To be added</li>
+        <li><strong>Unit V</strong> — To be added</li>
+      </ul>
+
+      <h3>What is Software?</h3>
+      <p>
+        Software is a collection of <strong>instructions (programs)</strong> and
+        <strong>data</strong> used to operate computer systems, hardware, or machines and
+        perform specific tasks — such as calculating, editing, gaming, or browsing.
+      </p>
+
+      <div class="callout callout--info">
+        <span class="callout-icon" aria-hidden="true">📘</span>
+        <div><strong>Hierarchy:</strong> Code → Program → Software. Code is the raw text
+        written by a developer; a program is a set of instructions; software =
+        programs + documentation + data.</div>
+      </div>
+
+      <h3>What is Software Engineering?</h3>
+      <p>
+        Software Engineering is the application of <strong>structured engineering
+        rules</strong> to build software — treating development as a planned,
+        disciplined, step-by-step practice rather than random coding. It ensures
+        software is built correctly, efficiently, and at scale.
+      </p>
+
+      <h4>Goals of Good Software</h4>
+      <ul class="check-list">
+        <li><strong>Reliable</strong> — works correctly and consistently without crashing</li>
+        <li><strong>Efficient</strong> — uses memory and processing power wisely</li>
+        <li><strong>Maintainable</strong> — easy for other programmers to fix, modify and update</li>
+        <li><strong>Affordable</strong> — completed within agreed budget and time</li>
+      </ul>
+    </section>
+
+    <!-- ============ SECTION 2 — SDLC ============ -->
+    <section id="section-sdlc" class="content-section">
+      <h2 class="section-title">Software Development Life Cycle (SDLC)</h2>
+
+      <p>
+        The <strong>Software Development Life Cycle (SDLC)</strong> is the step-by-step
+        journey of turning a raw idea into a finished, working software product. It is
+        the action plan every development team follows, from start to finish.
+      </p>
+
+      <h3>Six Phases</h3>
+      <div class="flow">
+        <span class="pill pill--blue">1. Requirements</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--violet">2. Design</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--green">3. Coding</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--blue">4. Testing</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--violet">5. Deployment</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--red">6. Maintenance</span>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="callout-icon" aria-hidden="true">💡</span>
+        <div><strong>Universal lifecycle:</strong> The same cycle applies to
+        <em>all</em> software — web apps, mobile apps, AI systems, machine-learning
+        models, and deep-learning pipelines. Each still requires requirements, design,
+        implementation, testing, deployment, and maintenance.</div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3 — Unit 1 ============ -->
+    <section id="unit-1" class="content-section">
+      <h2 class="section-title">
+        <span class="section-badge">1</span>
+        Unit 1
+      </h2>
+
+      <!-- ---------- 1.1 SE Paradigms ---------- -->
+      <h3>1.1 &nbsp; Software Engineering Paradigms</h3>
+      <p>
+        A <strong>paradigm</strong> is a chosen strategy or model that defines how the
+        SDLC is structured and executed. It shapes how a team plans, builds, and
+        delivers software.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Model</th><th>Nature</th><th>Best For</th><th>Key Risk</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Waterfall</strong></td>
+              <td>Linear, sequential</td>
+              <td>Fixed, well-understood requirements</td>
+              <td>No working software until the end</td>
+            </tr>
+            <tr>
+              <td><strong>Spiral</strong></td>
+              <td>Iterative + risk-driven</td>
+              <td>Large, mission-critical projects</td>
+              <td>Expensive; needs risk experts</td>
+            </tr>
+            <tr>
+              <td><strong>Prototype</strong></td>
+              <td>Iterative via feedback</td>
+              <td>Unclear or vague requirements</td>
+              <td>Prototype mistaken for final product</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="callout-icon" aria-hidden="true">🎯</span>
+        <div><strong>Exam tip:</strong> Choose Waterfall when requirements are stable,
+        Spiral when risk is high, and Prototype when requirements are unclear.</div>
+      </div>
+
+      <!-- ---------- 1.2 Waterfall ---------- -->
+      <h3>1.2 &nbsp; Waterfall Model</h3>
+      <p>
+        The Waterfall model is a <strong>linear, sequential</strong> approach where
+        each phase must be completed before the next one begins. It is the oldest and
+        simplest SDLC model.
+      </p>
+
+      <div class="waterfall">
+        <div class="wf-row" style="--indent:0"><span class="wf-num">1</span> Requirements Analysis</div>
+        <div class="wf-arrow">↓</div>
+        <div class="wf-row" style="--indent:1"><span class="wf-num">2</span> System Design</div>
+        <div class="wf-arrow">↓</div>
+        <div class="wf-row" style="--indent:2"><span class="wf-num">3</span> Implementation (Coding)</div>
+        <div class="wf-arrow">↓</div>
+        <div class="wf-row" style="--indent:3"><span class="wf-num">4</span> Integration &amp; Testing</div>
+        <div class="wf-arrow">↓</div>
+        <div class="wf-row" style="--indent:4"><span class="wf-num">5</span> Deployment</div>
+        <div class="wf-arrow">↓</div>
+        <div class="wf-row" style="--indent:5"><span class="wf-num">6</span> Maintenance</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="info-card info-card--green">
+          <h4>✔ When to Use</h4>
+          <ul>
+            <li>Short projects with fixed budgets</li>
+            <li>Stable, well-understood requirements</li>
+            <li>Zero ambiguity (government contracts)</li>
+            <li>Hardware-integrated software</li>
+          </ul>
+        </div>
+        <div class="info-card info-card--red">
+          <h4>✘ Limitations</h4>
+          <ul>
+            <li>No working software until the very end</li>
+            <li>Mistakes in Step 1 are costly later</li>
+            <li>Cannot handle changing requirements</li>
+            <li>Testing happens very late</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout--info">
+        <span class="callout-icon" aria-hidden="true">📌</span>
+        <div><strong>Note:</strong> Waterfall is <em>documentation-heavy</em> — every
+        phase produces a deliverable (SRS, design document, test report) before moving
+        to the next.</div>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="callout-icon" aria-hidden="true">🎯</span>
+        <div><strong>Exam tip:</strong> Waterfall is the <em>classic baseline</em> —
+        every other model in this unit is compared against it.</div>
+      </div>
+
+      <!-- ---------- 1.3 Spiral ---------- -->
+      <h3>1.3 &nbsp; Spiral Model</h3>
+      <p>
+        The Spiral model is a <strong>risk-driven, iterative</strong> meta-model.
+        Development proceeds in continuous loops — each loop is a mini-cycle, and the
+        system grows with every turn. Like rolling a snowball down a hill, stopping
+        often to check for rocks (risks).
+      </p>
+
+      <div class="spiral-box">
+        <svg viewBox="0 0 320 320" class="spiral-svg" role="img" aria-label="Spiral model with four quadrants">
+          <defs>
+            <marker id="spArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+              <path d="M0,0 L9,3 L0,6 z" fill="currentColor"/>
+            </marker>
+          </defs>
+          <line x1="160" y1="12" x2="160" y2="308" class="spiral-divider"/>
+          <line x1="12" y1="160" x2="308" y2="160" class="spiral-divider"/>
+          <path d="M175,160 A15,15 0 0 1 160,190 A50,50 0 0 1 110,160 A70,70 0 0 1 160,90 A100,100 0 0 1 260,160"
+                class="spiral-path" marker-end="url(#spArrow)"/>
+          <text x="240" y="42" text-anchor="middle" class="spiral-text">1. Planning</text>
+          <text x="240" y="292" text-anchor="middle" class="spiral-text">2. Risk Analysis</text>
+          <text x="80" y="292" text-anchor="middle" class="spiral-text">3. Engineering</text>
+          <text x="80" y="42" text-anchor="middle" class="spiral-text">4. Evaluation</text>
+        </svg>
+      </div>
+
+      <h4>The Four Quadrants (every loop)</h4>
+      <ol class="ordered-list">
+        <li><strong>Planning</strong> — define goals and alternative solutions</li>
+        <li><strong>Risk Analysis</strong> — identify risks, build prototypes to test feasibility</li>
+        <li><strong>Engineering</strong> — build and test the product for this loop</li>
+        <li><strong>Evaluation</strong> — customer reviews progress; next loop is planned</li>
+      </ol>
+
+      <div class="grid-2">
+        <div class="info-card info-card--green">
+          <h4>✔ When to Use</h4>
+          <ul>
+            <li>Massive, mission-critical projects</li>
+            <li>High-risk domains (banking, aerospace)</li>
+            <li>Complex and uncertain requirements</li>
+          </ul>
+        </div>
+        <div class="info-card info-card--red">
+          <h4>✘ Limitations</h4>
+          <ul>
+            <li>Very expensive and time-consuming</li>
+            <li>Needs experts who can predict risks</li>
+            <li>Not suitable for small projects</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="callout-icon" aria-hidden="true">🎯</span>
+        <div><strong>Exam tip:</strong> Spiral is the only SDLC model where
+        <em>risk analysis</em> is a formal phase — not an afterthought.</div>
+      </div>
+
+      <!-- ---------- 1.4 Prototype ---------- -->
+      <h3>1.4 &nbsp; Prototype Model</h3>
+      <p>
+        An early, incomplete version of the software is built, shown to users, and
+        refined based on their feedback — like making a cheap clay model of a statue
+        before carving the real marble.
+      </p>
+
+      <h4>Two Types</h4>
+      <div class="grid-2">
+        <div class="info-card info-card--blue">
+          <h4>Throwaway Prototype</h4>
+          <p>Built only to test an idea or clarify requirements, then <strong>discarded</strong>
+          before the final product is developed.</p>
+        </div>
+        <div class="info-card info-card--violet">
+          <h4>Evolutionary Prototype</h4>
+          <p>Built as a <strong>foundation</strong> and gradually upgraded into the
+          final product through successive refinements.</p>
+        </div>
+      </div>
+
+      <h4>Process</h4>
+      <div class="flow">
+        <span class="pill pill--blue">Gather Requirements</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--violet">Build Prototype</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--green">User Review</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--blue">Refine</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--violet">Final Product</span>
+      </div>
+
+      <div class="grid-2">
+        <div class="info-card info-card--green">
+          <h4>✔ Advantages</h4>
+          <ul>
+            <li>Clarifies vague requirements early</li>
+            <li>Strong user involvement</li>
+            <li>Reduces risk of building the wrong thing</li>
+          </ul>
+        </div>
+        <div class="info-card info-card--red">
+          <h4>✘ Limitations</h4>
+          <ul>
+            <li>Users may mistake prototype for final</li>
+            <li>Can cause scope creep</li>
+            <li>Extra cost and time</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="callout-icon" aria-hidden="true">🎯</span>
+        <div><strong>Exam tip:</strong> Throwaway prototypes clarify requirements and
+        are thrown away; evolutionary prototypes <em>become</em> the final product.</div>
+      </div>
+
+      <!-- ---------- 1.5 Software Requirements ---------- -->
+      <h3>1.5 &nbsp; Software Requirements</h3>
+      <p>
+        A <strong>requirement</strong> is a condition or capability the system must
+        have to satisfy a contract, standard, or user need. Requirements engineering is
+        the <em>foundation</em> of software development — getting it wrong is the most
+        expensive mistake in the SDLC.
+      </p>
+
+      <h4>Types of Requirements</h4>
+      <div class="grid-2">
+        <div class="info-card info-card--blue">
+          <h4>Functional Requirements</h4>
+          <p>What the system <strong>must do</strong> — features, calculations, and
+          behaviour.</p>
+          <p class="example">e.g. "A user can log in with email and password."</p>
+        </div>
+        <div class="info-card info-card--violet">
+          <h4>Non-Functional Requirements</h4>
+          <p>How the system <strong>should behave</strong> — quality attributes.</p>
+          <p class="example">e.g. "The page must load in under 2 seconds."</p>
+        </div>
+      </div>
+
+      <h4>Requirements Engineering Process</h4>
+      <div class="flow">
+        <span class="pill pill--blue">Elicitation</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--violet">Analysis</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--green">Documentation</span>
+        <span class="arrow">→</span>
+        <span class="pill pill--red">Review</span>
+      </div>
+
+      <h4>Requirement Analysis Tools</h4>
+      <ul class="check-list">
+        <li><strong>DFD</strong> — maps how data enters, moves through, and exits the system</li>
+        <li><strong>CFD / Flowchart</strong> — step-by-step logic and decisions</li>
+        <li><strong>ERD</strong> — entities, attributes and relationships for the database</li>
+        <li><strong>Data Dictionary</strong> — glossary of exact data formats and rules</li>
+        <li><strong>Decision Tables</strong> — matrices for complex logical rules</li>
+      </ul>
+
+      <div class="callout callout--tip">
+        <span class="callout-icon" aria-hidden="true">🎯</span>
+        <div><strong>Exam tip:</strong> Functional = <em>what</em> it does (verbs and
+        features); Non-functional = <em>how well</em> it does it (performance, security,
+        usability).</div>
+      </div>
+
+      <!-- ---------- 1.6 Elicitation ---------- -->
+      <h3>1.6 &nbsp; Requirements Elicitation Techniques</h3>
+      <p>
+        Elicitation is the active process of gathering needs, expectations, and
+        constraints from stakeholders.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th style="width:32%">Technique</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Interviews</strong></td><td>One-on-one discussions — open-ended (exploratory) or structured (fixed agenda)</td></tr>
+            <tr><td><strong>Questionnaires</strong></td><td>Surveys to gather data from a large user base quickly</td></tr>
+            <tr><td><strong>Observations</strong></td><td>Shadowing users to uncover unspoken pain points</td></tr>
+            <tr><td><strong>Brainstorming</strong></td><td>Group sessions for high-volume idea generation; criticism suspended</td></tr>
+            <tr><td><strong>Use Case Development</strong></td><td>Narrative scenarios showing how users interact with the system</td></tr>
+            <tr><td><strong>Delphi Technique</strong></td><td>Anonymous iterative expert voting until consensus — avoids groupthink</td></tr>
+            <tr><td><strong>FAST</strong></td><td>Facilitated workshops where developers + clients jointly define requirements</td></tr>
+            <tr><td><strong>QFD</strong></td><td>Quality Function Deployment — prioritize features by the "voice of the customer"</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="callout-icon" aria-hidden="true">🎯</span>
+        <div><strong>Exam tip:</strong> Interviews and questionnaires are <em>direct</em>
+        methods; observation and brainstorming are <em>indirect</em>. Delphi and FAST
+        are <em>group</em> techniques.</div>
+      </div>
+
+      <!-- ---------- 1.7 SRS ---------- -->
+      <h3>1.7 &nbsp; SRS Document (IEEE 830)</h3>
+      <p>
+        The <strong>Software Requirement Specification (SRS)</strong> is the definitive
+        output of the requirements phase. It is both a blueprint for developers and a
+        formal contract with the client.
+      </p>
+
+      <h4>Structure — IEEE 830</h4>
+      <div class="srs-list">
+        <div class="srs-row">
+          <strong>1. Introduction</strong>
+          <span>Purpose · Scope · Definitions &amp; Acronyms · References · Overview</span>
+        </div>
+        <div class="srs-row">
+          <strong>2. Overall Description</strong>
+          <span>Product Perspective · Functions · User Characteristics · Constraints · Assumptions</span>
+        </div>
+        <div class="srs-row">
+          <strong>3. Specific Requirements</strong>
+          <span>Interfaces · Functional · Performance · Design Constraints · Database · System Attributes</span>
+        </div>
+        <div class="srs-row">
+          <strong>4. Change Management Process</strong>
+          <span>Formal procedure for handling future requirement changes</span>
+        </div>
+        <div class="srs-row">
+          <strong>5. Supporting Information</strong>
+          <span>Appendices · Diagrams · Flowcharts · Index</span>
+        </div>
+      </div>
+
+      <h4>Characteristics of a Good SRS</h4>
+      <ul class="check-list">
+        <li><strong>Complete</strong> — covers all functional and non-functional requirements</li>
+        <li><strong>Consistent</strong> — no contradictions within the document</li>
+        <li><strong>Unambiguous</strong> — clear, precise and understandable</li>
+        <li><strong>Verifiable</strong> — every requirement can be tested</li>
+        <li><strong>Traceable</strong> — linked to source and design</li>
+        <li><strong>Modifiable</strong> — structured so it is easy to update</li>
+      </ul>
+
+      <div class="callout callout--info">
+        <span class="callout-icon" aria-hidden="true">✅</span>
+        <div><strong>Best practice:</strong> The SRS should be reviewed by an
+        independent third-party expert before design begins — this prevents expensive
+        errors from cascading downstream.</div>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="callout-icon" aria-hidden="true">🎯</span>
+        <div><strong>Exam tip:</strong> Remember the six traits: Complete, Consistent,
+        Unambiguous, Verifiable, Traceable, Modifiable.</div>
+      </div>
+
+      <!-- ---------- 1.8 Change Management ---------- -->
+      <h3>1.8 &nbsp; Requirements Change Management</h3>
+      <p>
+        Requirements <em>will</em> change. Change management is the formal procedure
+        for handling, approving, and documenting changes to requirements once the
+        project has started.
+      </p>
+
+      <h4>The Flow</h4>
+      <ol class="ordered-list">
+        <li><strong>Change Request</strong> — a stakeholder submits a formal request</li>
+        <li><strong>Impact Analysis</strong> — assess the effect on schedule, cost, design and testing</li>
+        <li><strong>Approval / Rejection</strong> — the Change Control Board (CCB) decides</li>
+        <li><strong>Implementation</strong> — update SRS, design, code and tests</li>
+        <li><strong>Documentation &amp; Traceability</strong> — log the change in version history</li>
+      </ol>
+
+      <div class="callout callout--risk">
+        <span class="callout-icon" aria-hidden="true">⚠️</span>
+        <div><strong>Why it matters:</strong> Unmanaged changes cause
+        <em>scope creep</em> — the project keeps expanding and never finishes.</div>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="callout-icon" aria-hidden="true">🎯</span>
+        <div><strong>Exam tip:</strong> Change Management always starts with a formal
+        request and ends with a logged, traceable record — never with an ad-hoc edit.</div>
+      </div>
+
+      <!-- ---------- 1.9 Project Management ---------- -->
+      <h3>1.9 &nbsp; Project Management</h3>
+      <p>
+        Project management ensures software is delivered <strong>on time, within
+        budget, and to the required quality</strong> — through metrics, scheduling, and
+        risk management.
+      </p>
+
+      <h4>Software Metrics</h4>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Type</th><th>What It Measures</th><th>Examples</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Product</strong></td><td>The software itself</td><td>LOC, complexity, defect density</td></tr>
+            <tr><td><strong>Process</strong></td><td>The development method</td><td>Bug-fix time, review efficiency</td></tr>
+            <tr><td><strong>Project</strong></td><td>Execution of the project</td><td>Budget, time, staffing</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Common Metrics</h4>
+      <ul class="check-list">
+        <li><strong>LOC</strong> — lines of code</li>
+        <li><strong>Cyclomatic Complexity</strong> — number of decision paths</li>
+        <li><strong>Defect Density</strong> — bugs per 1,000 lines of code</li>
+        <li><strong>Code Coverage</strong> — % of code exercised by tests</li>
+        <li><strong>MTTF</strong> — mean time to failure</li>
+        <li><strong>MTTR</strong> — mean time to repair</li>
+      </ul>
+
+      <div class="grid-2">
+        <div class="info-card info-card--red">
+          <h4>Risk Management</h4>
+          <ul>
+            <li>Identify threats early</li>
+            <li>Assess probability and impact</li>
+            <li>Plan mitigation</li>
+          </ul>
+        </div>
+        <div class="info-card info-card--blue">
+          <h4>Scheduling Tools</h4>
+          <ul>
+            <li><strong>Gantt Chart</strong> — visual timeline</li>
+            <li><strong>PERT</strong> — probabilistic time estimation</li>
+            <li><strong>CPM</strong> — critical path method</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout--info">
+        <span class="callout-icon" aria-hidden="true">📏</span>
+        <div><strong>Golden rule:</strong> You cannot manage what you do not measure.
+        Metrics act as an early-warning system for risks.</div>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="callout-icon" aria-hidden="true">🎯</span>
+        <div><strong>Exam tip:</strong> Product = code · Process = team · Project =
+        plan. Each metric type answers a different question.</div>
+      </div>
+
+      <!-- ---------- 1.10 Quick Revision ---------- -->
+      <h3>1.10 &nbsp; Quick Revision Table</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Topic</th><th>One-line Summary</th></tr></thead>
+          <tbody>
+            <tr><td><strong>SE Paradigms</strong></td><td>A chosen strategy defining how the SDLC is structured and executed</td></tr>
+            <tr><td><strong>Waterfall</strong></td><td>Linear, sequential model — each phase must finish before the next</td></tr>
+            <tr><td><strong>Spiral</strong></td><td>Risk-driven iterative model — 4 quadrants per loop</td></tr>
+            <tr><td><strong>Prototype</strong></td><td>Build a rough version, get feedback, refine (throwaway or evolutionary)</td></tr>
+            <tr><td><strong>Requirements</strong></td><td>Functional (what) and non-functional (how well)</td></tr>
+            <tr><td><strong>Elicitation</strong></td><td>Gather needs via interviews, surveys, observation, Delphi, FAST, QFD</td></tr>
+            <tr><td><strong>SRS</strong></td><td>IEEE 830 — 5-part structure; blueprint + contract</td></tr>
+            <tr><td><strong>Change Management</strong></td><td>Request → Impact → Approve → Implement → Log</td></tr>
+            <tr><td><strong>Project Management</strong></td><td>Metrics + risk management + scheduling (Gantt, PERT, CPM)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ SECTIONS 4–7 — Coming Soon ============ -->
+    <section id="unit-2" class="content-section">
+      <h2 class="section-title"><span class="section-badge">2</span> Unit 2</h2>
+      <div class="coming-soon">
+        <span class="coming-soon-icon" aria-hidden="true">⏳</span>
+        <p class="coming-soon-title">Unit 2 — Coming Soon</p>
+        <p class="coming-soon-sub">Content will be added soon.</p>
+      </div>
+    </section>
+
+    <section id="unit-3" class="content-section">
+      <h2 class="section-title"><span class="section-badge">3</span> Unit 3</h2>
+      <div class="coming-soon">
+        <span class="coming-soon-icon" aria-hidden="true">⏳</span>
+        <p class="coming-soon-title">Unit 3 — Coming Soon</p>
+        <p class="coming-soon-sub">Content will be added soon.</p>
+      </div>
+    </section>
+
+    <section id="unit-4" class="content-section">
+      <h2 class="section-title"><span class="section-badge">4</span> Unit 4</h2>
+      <div class="coming-soon">
+        <span class="coming-soon-icon" aria-hidden="true">⏳</span>
+        <p class="coming-soon-title">Unit 4 — Coming Soon</p>
+        <p class="coming-soon-sub">Content will be added soon.</p>
+      </div>
+    </section>
+
+    <section id="unit-5" class="content-section">
+      <h2 class="section-title"><span class="section-badge">5</span> Unit 5</h2>
+      <div class="coming-soon">
+        <span class="coming-soon-icon" aria-hidden="true">⏳</span>
+        <p class="coming-soon-title">Unit 5 — Coming Soon</p>
+        <p class="coming-soon-sub">Content will be added soon.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="site-footer">
+    <p>LNCT University · MCA (AIML) · Semester 1</p>
+    <p class="footer-credit">Author: Aniruddh Rao</p>
+  </footer>
+
+  <script src="software_engineering.js"></script>
+</body>
+</html>
